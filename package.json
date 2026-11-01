@@ -1,0 +1,15 @@
+{
+  "name": "dsh-profile-backup",
+  "version": "0.1.0",
+  "description": "Config-only backup/restore for a DeepSeek Harness profile, excluding node_modules, with archive path checks and force-backup semantics.",
+  "type": "module",
+  "bin": { "dsh-profile-backup": "bin/dsh-profile-backup.mjs" },
+  "exports": { ".": "./plugin/index.js", "./backup": "./src/backup.mjs", "./plugin": "./plugin/index.js", "./icon": "./icon.svg" },
+  "files": ["bin", "src", "plugin", "skills", "icon.svg", "README.md", "NOTICE.md", "LICENSE"],
+  "dsh": { "bundle": { "patch": "./plugin/cordis.patch.yml" } },
+  "engines": { "node": ">=20" },
+  "keywords": ["dsh", "deepseek-harness", "profile", "backup", "restore"],
+  "license": "MIT",
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "repository": { "type": "git", "url": "https://github.com/lengrufeng2008/dsh-profile-backup" }
+}
